@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
+//const logger = require('morgan')
 mongoose.connect(process.env.MONGODB_URI);
 
 const connection = mongoose.connection;
