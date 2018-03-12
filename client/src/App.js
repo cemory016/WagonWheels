@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import './App.css'
-import styled from 'styled-components'
+//import styled from 'styled-components'
 import HomeViewPage from './components/HomeViewPage/HomeViewPage'
 // import UserViewPage from './components/UserViewPage'
 // import FarmerViewPage from './components/FarmerViewPage'
