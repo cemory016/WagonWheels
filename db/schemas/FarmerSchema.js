@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-
+const ProductsSchema = require('./ProductsSchema')
 
   const FarmerSchema = new Schema({
     FarmerName: String,
@@ -12,4 +12,4 @@ const Schema = mongoose.Schema
     Products: [ ProductsSchema ]
   })
   
-  module.exports = FarmerSchema
+  module.exports = { FarmerSchema }
