@@ -12,4 +12,4 @@ const ProductsSchema = require('./ProductsSchema')
     Products: [ ProductsSchema ]
   })
   
-  module.exports = { FarmerSchema }
+  module.exports = FarmerSchema
