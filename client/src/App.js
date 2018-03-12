@@ -6,12 +6,14 @@ import HomeViewPage from './components/HomeViewPage/HomeViewPage'
 // import UserViewPage from './components/UserViewPage'
 // import FarmerViewPage from './components/FarmerViewPage'
 // import ProductViewPage from './components/ProductViewPage'
+import NavBar from './components/NavBar'
 
 class App extends Component {
   render () {
     return (
       <Router>
         <div>
+          <NavBar />
           <div>
             <Link to='/loginfarmer'>Farmer Login</Link>
             <Link to='/loginuser'>Customer Login</Link>
