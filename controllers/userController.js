@@ -1,10 +1,5 @@
-// This controller has routes to get all users,
-// create a new user, and get one user
-
-// Refer back to the soda app and gift tracker for more in-depth express review
-
 const express = require('express')
-const User = require('../models/User')
+const User = require('../models/UserModel')
 const router = express.Router()
 
 router.get('/', (req, res) => {
