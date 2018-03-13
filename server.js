@@ -21,14 +21,15 @@ app.use(logger('dev'))
 app.use(bodyParser.json());
 app.use(express.static(`${__dirname}/client/build`))
 
+
+const farmerController = require('./controllers/farmerController')
+app.use('/api/farmer', farmerController)
+
 const userController = require('./controllers/userController')
 app.use('/api/user', userController)
 
 const productController = require('./controllers/productController')
 app.use('/api/farmer/:farmerId/product', productController)
-
-const farmerController = require('./controllers/farmerController')
-app.use('/api/farmer', farmerController)
 
 
 app.get('/', (req, res) => {

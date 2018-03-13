@@ -20,8 +20,8 @@ class App extends Component {
           </div>
           <Switch>
             <Route exact path="/" component={HomeViewPage}/>
-            {/* <Route path="/loginuser" component={UserViewPage}/>
-            <Route path="/loginfarmer" component={FarmerViewPage}/>
+            <Route path="/loginuser" component={UserViewPage}/>
+            {/* <Route path="/loginfarmer" component={FarmerViewPage}/>
             <Route path="/farmer/:farmerId" component={ProductViewPage}/>  */}
           </Switch>
         </div>

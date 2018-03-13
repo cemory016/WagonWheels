@@ -7,6 +7,7 @@ class HomeViewPage extends Component {
       <div>
         <h1>Wagon Wheel Market</h1>
         <Link to="/loginfarmer">Farmers, Please Log In To Get Started</Link>
+        <br />
         <Link to="/loginuser">Customers, Please Log In To Get Started</Link>
       </div>
     )
