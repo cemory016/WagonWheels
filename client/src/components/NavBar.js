@@ -6,7 +6,7 @@ const NavBarStyles = styled.div`
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  background: palegoldenrod;
+  background: red;
 `
 
 class NavBar extends Component {
