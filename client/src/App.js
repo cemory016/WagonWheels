@@ -3,26 +3,23 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import './App.css'
 //import styled from 'styled-components'
 import HomeViewPage from './components/HomeViewPage/HomeViewPage'
-// import UserViewPage from './components/UserViewPage'
-// import FarmerViewPage from './components/FarmerViewPage'
-// import ProductViewPage from './components/ProductViewPage'
+import UserView from './components/UserViewPage/UserView'
+import FarmerView from './components/FarmerViewPage/FarmerView'
+import ProductView from './components/ProductsViewPage/ProductView'
 import NavBar from './components/NavBar'
 
 class App extends Component {
-  render () {
+  render() {
     return (
       <Router>
         <div>
           <NavBar />
-          <div>
-            <Link to='/loginfarmer'>Farmer Login</Link>
-            <Link to='/loginuser'>Customer Login</Link>
-          </div>
+
           <Switch>
-            <Route exact path="/" component={HomeViewPage}/>
-            <Route path="/loginuser" component={UserViewPage}/>
-            {/* <Route path="/loginfarmer" component={FarmerViewPage}/>
-            <Route path="/farmer/:farmerId" component={ProductViewPage}/>  */}
+            <Route exact path="/" component={HomeViewPage} />
+            <Route exact path="/user" component={UserView} />
+            <Route exact path="/farmer" component={FarmerView} />
+            <Route exact path="/farmer/:farmerId" component={ProductView} />
           </Switch>
         </div>
       </Router>

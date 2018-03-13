@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-class UserViewPage extends Component {
+class FarmerView extends Component {
   render () {
     return (
       <div>
-        <h1>User View Page</h1>
-        <p>welcolme {this.props.user}</p>
+        <h1>I am a Farmer</h1>
       </div>
     )
   }
 }
 
-export default UserViewPage
+export default FarmerView
