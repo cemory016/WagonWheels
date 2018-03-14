@@ -23,7 +23,7 @@ class App extends Component {
             <Route exact path="/" component={HomeViewPage} />
             <Route exact path="/markets" component={MarketsView} />
             <Route exact path="/user/signup" component={SignUpViews} />
-            <Route exact path="/user" component={UserView} />
+            <Route exact path="/user/:userId" component={UserView} />
             <Route exact path="/login/user" component={LogIn} />
             <Route exact path="/farmer/signup" component={SignUpViews} />
             <Route exact path="/farmer" component={FarmerView} />

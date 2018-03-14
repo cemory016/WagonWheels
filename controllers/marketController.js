@@ -14,8 +14,8 @@ router.post('/', (req, res) => {
    marketName: req.body.marketName,
    marketImg: req.body.marketImg,
    Location: req.body.Location,
-   farmers: [ Farmers ]
-
+   About: req.body.About,
+   Farmers: [ Farmers ]
   })
 
   newMarket.save().then(() => {

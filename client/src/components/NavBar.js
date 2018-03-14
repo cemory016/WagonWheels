@@ -18,8 +18,6 @@ class NavBar extends Component {
           <br />
           <Link to="/">Home Page</Link>
           <br />
-          <Link to="/">Map of our Farms</Link>
-          <br />
           <Link to="/">Meet our Farmers</Link>
           <br />
           <Link to="/">Produce Available</Link>
