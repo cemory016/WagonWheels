@@ -10,7 +10,12 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const newFarmer = new Farmer({
-    name: req.body.name
+   farmerUserName: req.body.farmerUserName,
+   farmerImg: req.body.farmerImg,
+   FarmName: req.body.FarmName,
+   Location: req.body.Location,
+   About: req.body.About,
+
   })
 
   newFarmer.save().then(() => {

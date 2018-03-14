@@ -8,6 +8,7 @@ import SignUpViews from './components/LogInViews/SignUpViews'
 import UserView from './components/UserViewPage/UserView'
 import FarmerView from './components/FarmerViewPage/FarmerView'
 import ProductView from './components/ProductsViewPage/ProductView'
+import MarketsView from './components/MarketsView/MarketsView'
 import NavBar from './components/NavBar'
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
 
           <Switch>
             <Route exact path="/" component={HomeViewPage} />
+            <Route exact path="/markets" component={MarketsView} />
             <Route exact path="/user/signup" component={SignUpViews} />
             <Route exact path="/user" component={UserView} />
             <Route exact path="/login/user" component={LogIn} />

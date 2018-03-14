@@ -5,6 +5,8 @@ const ProductsSchema = require('./ProductsSchema')
   const FarmerSchema = new Schema({
     FarmerName: String,
     FarmerUserName: String,
+    FarmerEmail: String,
+    FarmerPassword: String,
     FarmerImg: String,
     FarmName: String,
     FarmLocation: String,
