@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import FarmersView from './FarmerViewPage/FarmerView'
+
 
 class MarketsView extends Component {
-  setState: [
-
-  ]
+ 
   render () {
     return (
       <div>
