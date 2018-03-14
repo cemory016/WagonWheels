@@ -4,7 +4,7 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
   Farmer.find().then((Farmer) => {
-    res.send(farmer)
+    res.json(farmer)
   })
 })
 
@@ -20,10 +20,10 @@ router.post('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   Farmer.findById(req.params.id).then((farmer) => {
-    res.send(farmer)
+    res.json(farmer)
   }).catch((err) => {
     res.status(500)
-    res.send(err)
+    res.json(err)
   })
 })
 

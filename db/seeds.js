@@ -21,7 +21,6 @@ const Amber = new UserModel({
     UserFamilySize: "3",
 })
 
-
 const Beans = new ProductsModel({
     ProductName: "bean",
     ProductImg: String,

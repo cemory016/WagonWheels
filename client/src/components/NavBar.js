@@ -10,19 +10,24 @@ const NavBarStyles = styled.div`
 `
 
 class NavBar extends Component {
-    render () {
-      return (
-        <NavBarStyles>
-          <h1>Wagon Wheels Market</h1>
-          <ul>
-            <li>
-              <Link to="/">Home Page</Link>
-            </li>
-          </ul>
-        </NavBarStyles>
-      )
-    }
+  render() {
+    return (
+      <NavBarStyles>
+        <h1>Wagon Wheels Market</h1>
+        <p>
+          <br />
+          <Link to="/">Home Page</Link>
+          <br />
+          <Link to="/">Map of our Farms</Link>
+          <br />
+          <Link to="/">Meet our Farmers</Link>
+          <br />
+          <Link to="/">Produce Available</Link>
+        </p>
+      </NavBarStyles>
+    )
   }
+}
 
-  
-  export default NavBar
+
+export default NavBar
