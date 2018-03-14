@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 class LogIn extends Component {
@@ -27,17 +26,32 @@ class LogIn extends Component {
     return (
       <div>
         <h1>Farmer Log In</h1>
-        <label htmlFor="name">User Name</label>
+        <form method="post" action="/farmer/:farmerId?_method=PATCH">
+        <label htmlFor="name">Farmer User Name</label>
             <input type="text" name="name"
-              value={this.state.name}
+              value={this.state.FarmerName}
               onChange={this.handleChange}
             />
-        <p>user name</p>
-        <p>password</p>
+        <label htmlFor="name">Password</label>
+            <input type="text" name="name"
+              value={this.state.FarmerPassword}
+              onChange={this.handleChange}
+            />
+            </form>
+            <br />
+            <button type="submit">submit</button>
         <br />
         <h1>User Log In</h1>
-        <p>user name</p>
-        <p>password</p>
+        <label htmlFor="name">User Name</label>
+            <input type="text" name="name"
+              value={this.state.UserName}
+              onChange={this.handleChange}
+            />
+        <label htmlFor="name">Password</label>
+            <input type="text" name="name"
+              value={this.state.UserPassword}
+              onChange={this.handleChange}
+            />
       </div>
     )
   }

@@ -18,7 +18,6 @@ class App extends Component {
       <Router>
         <div>
           <NavBar />
-
           <Switch>
             <Route exact path="/" component={HomeViewPage} />
             <Route exact path="/markets" component={MarketsView} />
