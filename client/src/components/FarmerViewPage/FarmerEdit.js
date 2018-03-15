@@ -11,17 +11,19 @@ class EditFarmer extends Component {
             location: " ",
             password: " ",
         },
+        redirect: false
     }
     // componentDidMount = () => {
     //     const farmerId = this.props.match.params.farmerId
     // }
 
-    // updateUser = () => {
-    //     axios.patch(`/api/user/${this.props.match.params}`, this.state.editUser)
-    //         .then((response) => {
-    //             this.setState({ editUser: response.data.editUser })
-    //         })
-    // }
+    updateFarmer = () => {
+       const farmerId = this.props.match.params.farmerId
+        axios.patch(`/api/farmer/${farmerId}`, this.state.farmer)
+            .then((response) => {
+                this.setState({ farmer: response.data, redirect:true })
+            })
+    }
     // updateFarmer = (event) => {
     //     event.preventDefault()
     //     const farmerId = this.state.farmer._id
@@ -37,19 +39,19 @@ class EditFarmer extends Component {
         // newState[event.target.name] = event.target.value
         // this.setState(newState)
         const attribute = event.target.name
-        const newState = {...this.state.farmer}
-        newState[attribute] = event.target.value 
-        this.setState({farmer: newState})
+        const newState = { ...this.state.farmer }
+        newState[attribute] = event.target.value
+        this.setState({ farmer: newState })
     }
 
     handleSubmit = async (event) => {
         event.preventDefault()
         const id = this.props.match.params.farmerId
-        
     }
-
     render() {
-        return (
+        if (this.state.redirect) {
+            return <Redirect to={'/farmer/${this.props.match.params.farmerId'} />
+        } return (
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <div>

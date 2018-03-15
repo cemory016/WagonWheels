@@ -51,8 +51,9 @@ router.patch('/:id', async (req, res) => {
   try {
       //This is the payload being sent over
       const updatedFarmer = req.body
-      const farmer = await FarmerModel.findById(req.params.id)
-      farmer.bio = updatedFarmer.bio
+      const farmer = await Farmer.findByIdAndUpdate(req.params.id,updatedFarmer, {new: true})
+      // farmer.farmerName = updatedFarmer.farmerName
+      // farmer.bio = updatedFarmer.bio
       //Save the user object
       const saved = await farmer.save()
       //Send the updated user
