@@ -9,13 +9,10 @@ class HomeViewPage extends Component {
         <h1>Wagon Wheel Market</h1>
         <Link to="/markets">View a List of MARKETS</Link>
         <br />
-        <Link to="/user/signup">Link to USER Sign Up Page</Link>
+        <Link to="/signup">Link for USER and FARMER Sign Up Page</Link>
         <br />
-        <Link to="/login/user">USER, Please Log In To Get Started</Link>
+        <Link to="/login">Farmers and USER, Please Log In here To Get Started</Link>
         <br />
-        <Link to="/farmer/signup">Link to FARMERS Sign Up Page</Link>
-        <br />
-        <Link to="/login/farmer">FARMERS, Please Log In To Get Started</Link>
           <div className="MarketWelcolme" >
             <p>Laudantium. Occaecat velit, yet beatae yet laudantium for aliquam. Inventore doloremque ullamco eaque or labore pariatur, in. Dicta sed or beatae so dolores, eius quam, proident. Totam commodo. Vel. Voluptate ex and numquam enim. Perspiciatis aliqua amet consequatur so exercitation and exercitationem. In laudantium so velit or dolore and pariatur. Quisquam magnam. Consequatur odit consequat commodi suscipit. Dicta excepteur. Iste error yet enim or voluptas incididunt illo but ad. Dolor in dolor, or est or dicta. Amet adipisci yet dolorem voluptas but ipsam. Dolor explicabo and nequeporro.</p>
             <p> Dolores elit but nemo aperiam but ex but ipsum. Magna modi aut, but autem ratione but ipsa culpa. Id veritatis magnam or eos perspiciatis incididunt. Tempor quia. Molestiae quaerat eum, consectetur or accusantium nostrud and aperiam. Laboriosam reprehenderit. Sequi dicta. Commodo voluptatem.</p>

@@ -18,9 +18,9 @@ class NavBar extends Component {
           <br />
           <Link to="/">Home Page</Link>
           <br />
-          <Link to="/">Meet our Farmers</Link>
+          <Link to="/login">Farmer Login</Link>
           <br />
-          <Link to="/">Produce Available</Link>
+          <Link to="/login">User Login</Link>
         </p>
       </NavBarStyles>
     )

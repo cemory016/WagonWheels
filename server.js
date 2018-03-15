@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
-    console.log('Magic Happeing on port' + PORT)
+    console.log('We are Working here on port' + PORT)
 })  
 
 module.exports = app

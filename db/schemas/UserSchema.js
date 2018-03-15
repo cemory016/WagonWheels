@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 
-const UserSchema = new Schema({
+const User = new Schema({
   UserName: String,
   UserEmail: String,
   UserPassword: String,
@@ -13,4 +13,4 @@ const UserSchema = new Schema({
   UserFaveProducts: String,
 })
 
-module.exports = UserSchema
+module.exports = User
