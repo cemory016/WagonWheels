@@ -9,6 +9,7 @@ import SignUpViews from './components/LogInViews/SignUpViews'
 import UserEdit from './components/UserViewPage/UserEdit'
 import UserView from './components/UserViewPage/UserView'
 import FarmerView from './components/FarmerViewPage/FarmerView'
+import FarmerEdit from './components/FarmerViewPage/FarmerEdit'
 import ProductView from './components/ProductsViewPage/ProductView'
 import MarketsView from './components/MarketsView/MarketsView'
 import NavBar from './components/NavBar'
@@ -75,6 +76,7 @@ class App extends Component {
             <Route exact path="/login" component={LogIn} />
             <Route exact path="/farmer" component={FarmerView} />
             <Route exact path="/farmer/:farmerId" component={FarmerView} />
+            <Route exact path="/farmer/:farmerId/edit" component={FarmerEdit} />
             
           </Switch>
         </div>
