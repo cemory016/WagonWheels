@@ -24,13 +24,14 @@ class EditFarmer extends Component {
     // }
     updateFarmer = (event) => {
         event.preventDefault()
-        const farmerId = this.props.farmer._id
+        const farmerId = this.state.farmer._id
         console.log(farmerId)
         const payload = this.state.farmer
         axios.patch('/api/farmer/${farmerId}', payload).then(res => {
             this.setState({ farmerId: res.data })
         })
     }
+
     handleChange = (event) => {
         // const newState = {...this.state.Farmer}
         // newState[event.target.name] = event.target.value
