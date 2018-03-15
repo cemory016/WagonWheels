@@ -6,8 +6,8 @@ import axios from 'axios'
 
 class User extends Component {
   state = {
-      user: {
-      },
+      //changed from squgglie to square brackets
+      user: [],
       redirect: false,
     };
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import './App.css'
+import axios from 'axios'
 //import styled from 'styled-components'
 import HomeViewPage from './components/HomeViewPage/HomeViewPage'
 import LogIn from './components/LogInViews/LogIn'
@@ -14,7 +15,26 @@ import NavBar from './components/NavBar'
 
 class App extends Component {
   //set state, axios and lifecycle(willmount) then render
+  state = {
+    user: [],
+    farmer: [],
+    market: [],
+  }
+  getUser = () => {
+    axios.get('/api/user')
+      .then(response => {
+        const user = response.data
+        this.setState({ user })
+      }).catch((err) => {
+        console.log(err)
+      })
+  }
+  componentWillMount() {
+    this.getUser()
+  }
   render() {
+    const UsersPageComponent = () =>
+    (<UserView user={this.state.user}/>)
     return (
       <Router>
         <div>
