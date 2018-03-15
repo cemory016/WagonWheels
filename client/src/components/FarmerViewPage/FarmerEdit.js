@@ -5,11 +5,16 @@ import { Link, Redirect } from 'react-router-dom'
 
 class EditFarmer extends Component {
     state = {
-        Farmer: {},
+        farmer: {
+            farmerName: " ",
+            email: " ",
+            location: " ",
+            password: " ",
+        },
     }
-    componentDidMount = () => {
-        const farmerId = this.props.match.params.farmerId
-    }
+    // componentDidMount = () => {
+    //     const farmerId = this.props.match.params.farmerId
+    // }
 
     // updateUser = () => {
     //     axios.patch(`/api/user/${this.props.match.params}`, this.state.editUser)
@@ -26,61 +31,61 @@ class EditFarmer extends Component {
             this.setState({ farmerId: res.data })
         })
     }
+    handleChange = (event) => {
+        // const newState = {...this.state.Farmer}
+        // newState[event.target.name] = event.target.value
+        // this.setState(newState)
+        const attribute = event.target.name
+        const newState = {...this.state.farmer}
+        newState[attribute] = event.target.value 
+        this.setState({farmer: newState})
+    }
+
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.updateFarmer}>
                     <div>
                         <input type='text'
-                            name="FarmerName"
+                            name="farmerName"
                             placeholder="FarmerName"
+                            value={this.state.farmerName}
                             onChange={this.handleChange}
-                            />
+                        />
                     </div>
                     <div>
-                            <input type='text'
-                                name="email"
-                                placeholder="email"
-                                onChange={this.handleChange}
-                                />
+                        <input type='text'
+                            name="email"
+                            placeholder="email"
+                            value={this.state.email}
+                            onChange={this.handleChange}
+                        />
                     </div>
                     <div>
-                                <input type='text'
-                                    name="Password"
-                                    placeholder="Password"
-                                    onChange={this.handleChange}
-                                    />
+                        <input type='text'
+                            name="password"
+                            placeholder="Password"
+                            value={this.state.password}
+                            onChange={this.handleChange}
+                        />
                     </div>
                     <div>
-                                    <input type='text'
-                                        name="Password"
-                                        placeholder="Password"
-                                        onChange={this.handleChange}
-                                        />
+                        <input type='text'
+                            name="location"
+                            placeholder="Location"
+                            value={this.state.location}
+                            onChange={this.handleChange}
+                        />
                     </div>
-                    <div>
-                                        <input type='text'
-                                            name="Location"
-                                            placeholder="Location"
-                                            onChange={this.handleChange}
-                                            />
-                    </div>
-                    <div>
-                                            <input type='text'
-                                                name="FamilySize"
-                                                placeholder="FamilySize"
-                                                onChange={this.handleChange}
-                                                />
-                    </div>
-                        
-                        
+
+
                     <button type="submit">Save Changes
                     </button>
 
                 </form>
-          </div>
-                                    );
-                                }
-                            }
-                            
+            </div>
+        );
+    }
+}
+
 export default EditFarmer;
