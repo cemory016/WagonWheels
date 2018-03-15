@@ -39,13 +39,29 @@ router.post('/', async (req, res) => {
 //   try {
 //     const FarmerId = req.params.id
 //     const updatedFarmer = req.body
-//     const savedFarmer = await Farmer.findByIdAndUpdateFarmerId, updatedFarmer)
+//     const savedFarmer = await Farmer.findByIdAndUpdate(FarmerId, updatedFarmer)
 //     res.json(savedFarmer)
 //   } catch (err) {
 //     console.log(err)
 //     res.status(500).json(err)
 //   }
 // })
+
+router.patch('/:id', async (req, res) => {
+  try {
+      //This is the payload being sent over
+      const updatedFarmer = req.body
+      const farmer = await FarmerModel.findById(req.params.id)
+      farmer.bio = updatedFarmer.bio
+      //Save the user object
+      const saved = await farmer.save()
+      //Send the updated user
+      res.json(saved)
+  } catch (err) {
+      res.send(err)
+  }
+})
+
 router.delete('/:id', async (req, res) => {
   try {
     const FarmerId = req.params.id

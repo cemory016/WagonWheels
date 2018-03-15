@@ -3,14 +3,14 @@ const Schema = mongoose.Schema
 
 
 const User = new Schema({
-  UserName: String,
-  UserEmail: String,
-  UserPassword: String,
-  UserImg: String,
-  UserLocation: String,
-  UserFamilySize: Number,
-  UserFaveFarmers: String,
-  UserFaveProducts: String,
+  userName: String,
+  userEmail: String,
+  userPassword: String,
+  userImg: String,
+  userLocation: String,
+  userFamilySize: Number,
+  userFaveFarmers: String,
+  userFaveProducts: String,
 })
 
 module.exports = User

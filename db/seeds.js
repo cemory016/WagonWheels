@@ -17,92 +17,100 @@ connection.once('open', function () {
 
 
 const Amber = new UserModel({
-    UserName: "Amber",
-    UserEmail: "amber@gmail.com",
-    UserPassword: "amber",
-    UserLocation: "Atlanta",
-    UserFamilySize: "3",
+    userName: "Amber",
+    userEmail: "amber@gmail.com",
+    userPassword: "amber",
+    userLocation: "Atlanta",
+    userFamilySize: "3",
 })
 const Sal = new UserModel({
-    UserName: "Sal",
-    UserEmail: "sal@gmail.com",
-    UserPassword: "sal",
-    UserLocation: "Decatur",
-    UserFamilySize: "5",
+    userName: "Sal",
+    userEmail: "sal@gmail.com",
+    userPassword: "sal",
+    userLocation: "Decatur",
+    userFamilySize: "5",
 })
 const Mark = new UserModel({
-    UserName: "Mark",
-    UserEmail: "mark@gmail.com",
-    UserPassword: "mark",
-    UserLocation: "Atlanta",
-    UserFamilySize: "1",
+    userName: "Mark",
+    userEmail: "mark@gmail.com",
+    userPassword: "mark",
+    userLocation: "Atlanta",
+    userFamilySize: "1",
 })
 const GreenBeans = new ProductsModel({
-    ProductName: "Green bean",
-    ProductImg: String,
-    Description: "Green Bean",
-    ProductQuanity: 15,
-    ProductRemaining: 15,
+    productName: "Green bean",
+    productImg: String,
+    description: "Green Bean",
+    productQuanity: 15,
+    productRemaining: 15,
 })
 const PoleBeans = new ProductsModel({
-    ProductName: "Pole bean",
-    ProductImg: String,
-    Description: "Pole Bean. great for stew.",
-    ProductQuanity: 20,
-    ProductRemaining: 20,
+    productName: "Pole bean",
+    productImg: String,
+    description: "Pole Bean. great for stew.",
+    productQuanity: 20,
+    productRemaining: 20,
 })
 const Tomato = new ProductsModel({
-    ProductName: "Tomato",
-    ProductImg: String,
-    Description: "Beef Steak Tomato. dark red and meaty. one of my faves.",
-    ProductQuanity: 25,
-    ProductRemaining: 25,
+    productName: "Tomato",
+    productImg: String,
+    description: "Beef Steak Tomato. dark red and meaty. one of my faves.",
+    productQuanity: 25,
+    productRemaining: 25,
 })
 const BillyBob = new FarmerModel({
-    FarmerName: "Billy Bob",
-    FarmerUserName: "Billy_Bob's_Beans",
-    FarmerEmail: "billybob@beans.com",
-    FarmerPassword: "billybob",
-    FarmerImg: "https://sites.google.com/site/praisethebillybobgod22/home/Funny-Cool-Beans-Design.png",
-    FarmName: "Cool Beans",
-    FarmLocation: "Atlanta, Ga",
-    AboutTheFarm: "At Billy Bob's Beans...we love beans....grren beans, pork beans, potato beans, beannie babies, pole beans, skinny beans,fat beans, all types of beans,",
-    Products: [GreenBeans, PoleBeans]
+    farmerName: "Billy Bob",
+    farmerUserName: "Billy_Bob's_Beans",
+    farmerEmail: "billybob@beans.com",
+    farmerPassword: "billybob",
+    farmerImg: "https://sites.google.com/site/praisethebillybobgod22/home/Funny-Cool-Beans-Design.png",
+    farmName: "Cool Beans",
+    farmLocation: "Atlanta, Ga",
+    aboutTheFarm: "At Billy Bob's Beans...we love beans....grren beans, pork beans, potato beans, beannie babies, pole beans, skinny beans,fat beans, all types of beans,",
+    products: [GreenBeans, PoleBeans]
 })
 const SallySue = new FarmerModel({
-    FarmerName: "Sally Sue",
-    FarmerUserName: "Sallys_Salads",
-    FarmerEmail: "sallysue@salad.com",
-    FarmerPassword: "sallysue",
-    FarmerImg: "https://sites.google.com/site/praisethebillybobgod22/home/Funny-Cool-Beans-Design.png",
-    FarmName: "Cool Beans",
-    FarmLocation: "Atlanta, Ga",
-    AboutTheFarm: "At Billy Bob's Beans...we love beans....grren beans, pork beans, potato beans, beannie babies, pole beans, skinny beans,fat beans, all types of beans,",
-    Products: [Tomato]
+    farmerName: "Sally Sue",
+    farmerUserName: "Sallys_Salads",
+    farmerEmail: "sallysue@salad.com",
+    farmerPassword: "sallysue",
+    farmerImg: "https://sites.google.com/site/praisethebillybobgod22/home/Funny-Cool-Beans-Design.png",
+    farmName: "Cool Beans",
+    farmLocation: "Atlanta, Ga",
+    aboutTheFarm: "At Billy Bob's Beans...we love beans....grren beans, pork beans, potato beans, beannie babies, pole beans, skinny beans,fat beans, all types of beans,",
+    products: [Tomato]
 })
 const DecaturMarket = new MarketModel({
-    MarketName: "Downtown Decatur",
-    MarketImg: "https://cfmatl.org/wp-content/uploads/2016/01/Decatur-Farmers-Market.jpg",
-    MarketLocation: "Decatur, Ga 30030",
-    AboutTheMarket: "Decatur where its greatrer! We are open from 9am - 2pm ever Saturday",
-    MarketFarmers: [BillyBob, SallySue]
+    marketName: "Downtown Decatur",
+    marketImg: "https://cfmatl.org/wp-content/uploads/2016/01/Decatur-Farmers-Market.jpg",
+    marketLocation: "Decatur, Ga 30030",
+    aboutTheMarket: "Decatur where its greatrer! We are open from 9am - 2pm ever Saturday",
+    marketFarmers: [BillyBob, SallySue]
 })
 const CollegeParkMarket = new MarketModel({
-    MarketName: "College Park",
-    MarketImg: "Image of College Park Goes Here",
-    MarketLocation: "College Park",
-    AboutTheMarket: "College Park Bubba Sparks! We are open from 9am - 2pm ever Sunday",
-    MarketFarmers: [BillyBob, SallySue]
+    marketName: "College Park",
+    marketImg: "Image of College Park Goes Here",
+    marketLocation: "College Park",
+    aboutTheMarket: "College Park Bubba Sparks! We are open from 9am - 2pm ever Sunday",
+    marketFarmers: [BillyBob, SallySue]
 })
 
 // First we remove all users,
 // then we save our new user
-MarketModel.remove({})
-    .then(() => DecaturMarket.save())
-    .then(() => BillyBob.save())
-    .then(() => SallySue.save())
+UserModel.remove({})
     .then(() => Amber.save())
     .then(() => Sal.save())
     .then(() => Mark.save())
+ProductsModel.remove({})
+    .then(() => GreenBeans.save())
+    .then(() => PoleBeans.save())
+    .then(() => Tomato.save())
+FarmerModel.remove({})
+    .then(() => BillyBob.save())
+    .then(() => SallySue.save())
+MarketModel.remove({})
+    .then(() => DecaturMarket.save())
+    .then(() => CollegeParkMarket.save())
+
     .then(() => console.log('Successful Save'))
     .then(() => mongoose.connection.close())

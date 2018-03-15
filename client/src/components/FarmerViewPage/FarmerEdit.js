@@ -22,15 +22,15 @@ class EditFarmer extends Component {
     //             this.setState({ editUser: response.data.editUser })
     //         })
     // }
-    updateFarmer = (event) => {
-        event.preventDefault()
-        const farmerId = this.state.farmer._id
-        console.log(farmerId)
-        const payload = this.state.farmer
-        axios.patch('/api/farmer/${farmerId}', payload).then(res => {
-            this.setState({ farmerId: res.data })
-        })
-    }
+    // updateFarmer = (event) => {
+    //     event.preventDefault()
+    //     const farmerId = this.state.farmer._id
+    //     console.log(farmerId)
+    //     const payload = this.state.farmer
+    //     axios.patch('/api/farmer/${farmerId}', payload).then(res => {
+    //         this.setState({ farmerId: res.data })
+    //     })
+    // }
 
     handleChange = (event) => {
         // const newState = {...this.state.Farmer}
@@ -42,10 +42,16 @@ class EditFarmer extends Component {
         this.setState({farmer: newState})
     }
 
+    handleSubmit = async (event) => {
+        event.preventDefault()
+        const id = this.props.match.params.farmerId
+        
+    }
+
     render() {
         return (
             <div>
-                <form onSubmit={this.updateFarmer}>
+                <form onSubmit={this.handleSubmit}>
                     <div>
                         <input type='text'
                             name="farmerName"

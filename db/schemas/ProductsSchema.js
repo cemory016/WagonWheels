@@ -3,11 +3,11 @@ const Schema = mongoose.Schema
 
 
 const ProductsSchema = new Schema({
-  ProductName: String,
-  ProductImg: String,
-  Description: String,
-  ProductQuanity: Number,
-  ProductRemaining: Number,
+  productName: String,
+  productImg: String,
+  description: String,
+  productQuanity: Number,
+  productRemaining: Number,
 })
 
 module.exports = ProductsSchema
