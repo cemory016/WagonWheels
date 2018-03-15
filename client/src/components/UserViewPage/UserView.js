@@ -34,8 +34,8 @@ class User extends Component {
               <h4>Family size: {this.state.user.UserFamilySize}</h4>
               <br />
               <h4>{this.state.user.UserEmail}</h4>
-
-              <a href="/user/:userId/edit">edit page</a>
+              <br />
+              <Link to={`/user/${this.state.user._id}/edit`}>edit page</Link>
           </div>
       );
   }
