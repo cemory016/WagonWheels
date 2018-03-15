@@ -13,30 +13,32 @@ class LogIn extends Component {
     newState[ event.target.username ] = event.target.value
     this.setState(newState)
   }
+ 
+  getAllUsers = () => {
+    axios.get('/api/user').then(res => {
+     // console.log(res.data)
+      this.setState({users: res.data})
+    })
+  }
   handleChange = (event) => {
     const newState = { ...this.state }
     newState[ event.target.farmername ] = event.target.value
     this.setState(newState)
   }
-  getAllUsers = () => {
-    axios.get('localhost:3001/api/users').then(res => {
-      this.setState({users: res.data})
-    })
-  }
   getAllFarmers = () => {
-    axios.get('localhost:3001/api/farmers').then(res => {
+    axios.get('/api/farmers').then(res => {
       this.setState({farmers: res.data})
     })
   }
   componentDidMount () {
-    this.getAllUsers(() => {
-      this.getAllFarmers()
-    })
+    this.getAllUsers() 
+   this.getAllFarmers()
+  
   }
   render () {
     return (
       <div>
-        <h1>Farmer Log In</h1>
+        {/* <h1>Farmer Log In</h1>
         <form onSubmit={this.userId}>
         <label htmlFor="name">Farmer User Name</label>
             <input type="text" name="farmername"
@@ -52,7 +54,10 @@ class LogIn extends Component {
             <button type="submit">submit</button>
             </form>
         <br />
+         */}
         <h1>User Log In</h1>
+
+
         <form onSubmit={this.userId}>
         <label htmlFor="name">User Name</label>
             <input type="text" name="username"
@@ -67,6 +72,9 @@ class LogIn extends Component {
             <br />
             <button type="submit">submit</button>
             </form>
+
+
+            
       </div>
     )
   }

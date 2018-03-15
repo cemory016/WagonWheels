@@ -22,13 +22,11 @@ class App extends Component {
   }
   componentWillMount() {
     this.getUser()
-  }
-  componentWillMount() {
     this.getFarmer()
+//   this.getMarkets()
   }
-  // componentWillMount() {
-  //   this.getMarkets()
-  // }
+
+ 
   getUser = () => {
     axios.get('/api/user')
       .then(response => {
@@ -75,7 +73,7 @@ class App extends Component {
             <Route exact path="/user/:userId" component={UserView} />
             <Route exact path="/login" component={LogIn} />
             <Route exact path="/farmer" component={FarmerView} />
-            <Route exact path="/farmer/:farmerId" component={ProductView} />
+            <Route exact path="/farmer/:farmerId" component={FarmerView} />
             
           </Switch>
         </div>

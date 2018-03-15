@@ -3,8 +3,8 @@ const User = require('../models/UserModel')
 const router = express.Router({ mergeParams: true })
 
 router.get('/', (req, res) => {
-  User.find().then((users) => {
-    res.send(users)
+  User.find().then((user) => {
+    res.json(user)
     console.log(user)
   }).catch(err => {
     console.log(err)

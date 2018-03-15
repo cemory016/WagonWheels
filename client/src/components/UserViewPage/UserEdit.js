@@ -7,9 +7,9 @@ class EditUser extends Component {
     state = {
         User: {},
     }
-    // componentDidMount = () => {
-    //     const userId = this.props.match.params.userId
-    // }
+    componentDidMount = () => {
+        const userId = this.props.match.params.userId
+    }
 
     // updateUser = () => {
     //     axios.patch(`/api/user/${this.props.match.params}`, this.state.editUser)
@@ -22,7 +22,7 @@ class EditUser extends Component {
         const userId = this.props.user._id
         console.log(userId)
         const payload = this.state.user
-        axios.patch(`/api/user/${userId}`, payload).then(res => {
+        axios.patch('/api/user/${userId}', payload).then(res => {
         this.setState({ user: res.data})
         })
       }
