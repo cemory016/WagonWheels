@@ -2,12 +2,12 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const FarmerSchema = require('./FarmerSchema')
 
-const MarketSchema = new Schema({
-    MarketName: String,
-    MarketImg: String,
-    MarketLocation: String,
-    AboutTheMarket: String,
-    MarketFarmers: [ FarmerSchema ]
+const Market = new Schema({
+    marketName: String,
+    marketImg: String,
+    marketLocation: String,
+    aboutTheMarket: String,
+    marketFarmers: [ FarmerSchema ]
 })
 
-module.exports = MarketSchema
+module.exports = Market

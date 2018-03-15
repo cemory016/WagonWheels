@@ -1,7 +1,7 @@
 const express = require('express')
 const Market = require('../models/MarketModel')
 const Farmer = require('../models/FarmerModel')
-const router = express.Router()
+const router = express.Router({ mergeParams: true })
 
 router.get('/', (req, res) => {
   Market.find().then((Market) => {
@@ -13,9 +13,9 @@ router.post('/', (req, res) => {
   const newMarket = new Market({
    marketName: req.body.marketName,
    marketImg: req.body.marketImg,
-   Location: req.body.Location,
-   About: req.body.About,
-   Farmers: [ Farmers ]
+   farmLocation: req.body.farmLocation,
+   about: req.body.About,
+   farmers: [ Farmer ]
   })
 
   newMarket.save().then(() => {

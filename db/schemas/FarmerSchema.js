@@ -2,16 +2,16 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const ProductsSchema = require('./ProductsSchema')
 
-  const FarmerSchema = new Schema({
-    FarmerName: String,
-    FarmerUserName: String,
-    FarmerEmail: String,
-    FarmerPassword: String,
-    FarmerImg: String,
-    FarmName: String,
-    FarmLocation: String,
-    AboutTheFarm: String,
-    Products: [ ProductsSchema ]
+  const Farmer = new Schema({
+    farmerName: String,
+    farmerUserName: String,
+    farmerEmail: String,
+    farmerPassword: String,
+    farmerImg: String,
+    farmName: String,
+    farmLocation: String,
+    aboutTheFarm: String,
+    products: [ ProductsSchema ]
   })
   
-  module.exports = FarmerSchema
+  module.exports = Farmer

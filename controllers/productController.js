@@ -1,6 +1,6 @@
 const express = require('express')
 const Product = require('../models/ProductsModel')
-const router = express.Router()
+const router = express.Router({ mergeParams: true })
 
 router.get('/farmer/:id/product', (req, res) => {
   Product.find().then((product) => {

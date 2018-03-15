@@ -1,6 +1,6 @@
 const express = require('express')
 const Farmer = require('../models/FarmerModel')
-const router = express.Router()
+const router = express.Router({ mergeParams: true })
 
 router.get('/', (req, res) => {
   Farmer.find().then((Farmer) => {
@@ -16,7 +16,8 @@ router.get('/:farmerId', (req, res) => {
   const farmerId= req.params.farmerId
   Farmer.findById(farmerId)
   .then((farmer) => {
-    res.send(user)
+    //changed from send to json
+    res.json(farmer)
   }).catch((err) => {
     res.status(500)
     res.send(err)
@@ -27,9 +28,9 @@ router.post('/', (req, res) => {
   const newFarmer = new Farmer({
     farmerUserName: req.body.farmerUserName,
     farmerImg: req.body.farmerImg,
-    FarmName: req.body.FarmName,
-    Location: req.body.Location,
-    About: req.body.About,
+    farmName: req.body.farmName,
+    farmLocation: req.body.farmLocation,
+    about: req.body.about,
 
   })
 

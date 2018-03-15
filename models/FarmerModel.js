@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
-const FarmerSchema = require('../db/schemas/FarmerSchema')
+const Farmer = require('../db/schemas/FarmerSchema')
 
 
-const FarmerModel = mongoose.model('FarmerModel', FarmerSchema)
+const FarmerModel = mongoose.model('FarmerModel', Farmer)
 
 module.exports = FarmerModel

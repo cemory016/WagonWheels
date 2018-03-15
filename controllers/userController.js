@@ -1,6 +1,6 @@
 const express = require('express')
 const User = require('../models/UserModel')
-const router = express.Router()
+const router = express.Router({ mergeParams: true })
 
 router.get('/', (req, res) => {
   User.find().then((users) => {
@@ -16,7 +16,8 @@ router.get('/:userId', (req, res) => {
   const userId = req.params.userId
   User.findById(userId)
     .then((user) => {
-      res.send(user)
+      //changed from save to json
+      res.json(user)
     }).catch((err) => {
       res.status(500)
       res.send(err)
