@@ -71,6 +71,7 @@ class App extends Component {
             <Route exact path="/markets" component={MarketsView} />
             <Route exact path="/signup" component={SignUpViews} />
             <Route exact path="/user/:userId" component={UserView} />
+            <Route exact path="/user/:userId/edit" component={UserEdit} />
             <Route exact path="/login" component={LogIn} />
             <Route exact path="/farmer" component={FarmerView} />
             <Route exact path="/farmer/:farmerId" component={FarmerView} />

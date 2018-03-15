@@ -23,7 +23,7 @@ class EditUser extends Component {
         console.log(userId)
         const payload = this.state.user
         axios.patch('/api/user/${userId}', payload).then(res => {
-        this.setState({ user: res.data})
+        this.setState({ userId: res.data})
         })
       }
     render() {
@@ -34,7 +34,7 @@ class EditUser extends Component {
                         <input type='text'
                             name="UserName"
                             placeholder="Username"
-                            onChange={this.props.user.username}
+                            onChange={this.handleChange}
                         
                         />
                     </div>
@@ -68,7 +68,7 @@ class EditUser extends Component {
                     </div>
 
 
-                    <button type="submit">redirect to user
+                    <button type="submit">Save Changes
                     </button>
 
                 </form>
