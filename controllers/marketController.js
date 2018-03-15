@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
   })
 
   newMarket.save().then(() => {
-    res.redirect('/api/market')
+    res.redirect('/api/markets')
   })
 })
 

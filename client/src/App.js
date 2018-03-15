@@ -20,6 +20,15 @@ class App extends Component {
     farmer: [],
     market: [],
   }
+  componentWillMount() {
+    this.getUser()
+  }
+  componentWillMount() {
+    this.getFarmer()
+  }
+  // componentWillMount() {
+  //   this.getMarkets()
+  // }
   getUser = () => {
     axios.get('/api/user')
       .then(response => {
@@ -29,12 +38,32 @@ class App extends Component {
         console.log(err)
       })
   }
-  componentWillMount() {
-    this.getUser()
+  getFarmer = () => {
+    axios.get('/api/farmer')
+      .then(response => {
+        const farmer = response.data
+        this.setState({ farmer })
+      }).catch((err) => {
+        console.log(err)
+      })
   }
+  // getMarket = () => {
+  //   axios.get('/api/markets')
+  //     .then(response => {
+  //       const user = response.data
+  //       this.setState({ markets })
+  //     }).catch((err) => {
+  //       console.log(err)
+  //     })
+  // }
+  
   render() {
     const UsersPageComponent = () =>
     (<UserView user={this.state.user}/>)
+    const FarmerPageComponent = () =>
+    (<FarmerView farmer={this.state.farmer}/>)
+    const MarketPageComponent = () =>
+    (<MarketsView market={this.state.market}/>)
     return (
       <Router>
         <div>
