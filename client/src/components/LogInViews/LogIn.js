@@ -38,7 +38,7 @@ class LogIn extends Component {
   render () {
     return (
       <div>
-        {/* <h1>Farmer Log In</h1>
+        <h1>Farmer Log In</h1>
         <form onSubmit={this.userId}>
         <label htmlFor="name">Farmer User Name</label>
             <input type="text" name="farmername"
@@ -54,7 +54,7 @@ class LogIn extends Component {
             <button type="submit">submit</button>
             </form>
         <br />
-         */}
+        
         <h1>User Log In</h1>
 
 

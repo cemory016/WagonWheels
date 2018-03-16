@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import { Button, Card, Row, Col } from 'react-materialize'
 import NewUserForm from './NewUserForm'
 import NewFarmerForm from './NewFarmerForm'
 import axios from 'axios'
@@ -10,10 +12,8 @@ class SignUpViews extends Component {
     farmer: [],
     showForm: false
   };
+  
 
-  componentWillMount() {
-    this.getAllUser();
-  }
   componentWillMount() {
     this.getAllFarmer();
   }
@@ -39,9 +39,8 @@ class SignUpViews extends Component {
         ) : null}
         {this.state.farmer.map(farmer => (
             <div key={farmer._id}>
-          <Link to={'farmer/${farmer._id}'}>
-            <h3>{farmer.farmerName}</h3>
-          </Link>
+          <h3><Link to={'farmer/${farmer._id}'}>{farmer.farmerName}
+          </Link></h3>
           </div>
         ))}
         <button onClick={this.toggleNewForm}>New User Sign Up</button>

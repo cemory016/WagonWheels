@@ -27,13 +27,13 @@ class User extends Component {
           <div>
               Hi from UserProfile
                <br/>
-              <h3>Name: {this.state.user.UserName}</h3>
+              <h3>Name: {this.state.user.userName}</h3>
               <br />
-              <h4>Location: {this.state.user.UserLocation}</h4>
+              <h4>Location: {this.state.user.userLocation}</h4>
               <br />
-              <h4>Family size: {this.state.user.UserFamilySize}</h4>
+              <h4>Family size: {this.state.user.userFamilySize}</h4>
               <br />
-              <h4>{this.state.user.UserEmail}</h4>
+              <h4>{this.state.user.userEmail}</h4>
               <br />
               <Link to={`/user/${this.state.user._id}/edit`}>edit page</Link>
           </div>

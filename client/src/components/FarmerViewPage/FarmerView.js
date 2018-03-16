@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 
-
 class FarmerView extends Component {
     state = {
         //changed from squgglie to square brackets

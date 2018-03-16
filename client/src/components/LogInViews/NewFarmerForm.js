@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios'
+import { Button, Card, Row, Col } from 'react-materialize'
 
 class NewFarmerForm extends Component {
   state = {
@@ -32,7 +33,7 @@ class NewFarmerForm extends Component {
             <label htmlFor="farmername">FarmerName: </label>
             <input onChange={this.handleChange} type="text" name="farmerName" value={this.state.farmerName} />
           </div>
-          <button>Submit</button>
+          <Button waves='light' node='a'> Submit </Button>
         </form>
       </div>
     );

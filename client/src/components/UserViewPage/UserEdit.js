@@ -72,6 +72,7 @@ class EditUser extends Component {
                     </button>
 
                 </form>
+                <button type="delete">Delete User Profile</button>
             </div>
         );
     }
