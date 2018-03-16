@@ -1,6 +1,6 @@
 const express = require('express')
 const Market = require('../models/MarketModel')
-const Farmer = require('../models/FarmerModel')
+// const Farmer = require('../models/FarmerModel')
 const router = express.Router({ mergeParams: true })
 
 router.get('/', (req, res) => {

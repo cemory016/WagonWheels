@@ -17,7 +17,11 @@ const HomeButtons = styled.div`
 const MarketWelcolme = styled.div`
 margin: 2em;
 padding: 10px;
-border 5px;
+border: 5px;
+margin: 20px;
+display: flex;
+text-align: left;
+font-size: 16em sans-serif;
 `
 
 class HomeViewPage extends Component {

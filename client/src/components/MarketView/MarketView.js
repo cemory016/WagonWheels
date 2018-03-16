@@ -1,7 +1,19 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import styled from 'styled-components'
 
+const decaturMktImg = styled.div`
+display: flex;
+width: 40px;
+height: 30px;
+`
+const collegeParkMktImg = styled.div`
+display: flex;
+vw: 2;
+`
+const MarketWords = styled.div`
+`
 
 class MarketView extends Component {
   state = {
@@ -21,13 +33,16 @@ class MarketView extends Component {
   render() {
     return (
       <container>
-      <div>
+      <div className="MarketWords">
         <h1>Local Markets</h1>
         <p>a list of all the markets from all the farmers markets list</p>
         <p>have each market a link to the individual market page where the individual farmers at that particular market can be seen.</p>
       </div>
-      <div className="mktImg">
-        {this.props.markets}
+      <div >
+      <img className="decaturMktImg" src="../Img/annie-spratt-215755-unsplash.jpg" />
+      </div>
+      <div className="collegeParkMktImg">
+      <img src="../Img/2I1A4480__2_.0.jpg" />
       </div>
       </container>
     )
