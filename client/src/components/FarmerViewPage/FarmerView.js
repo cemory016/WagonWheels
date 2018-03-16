@@ -12,7 +12,7 @@ class FarmerView extends Component {
 
     componentDidMount = () => {
         const farmerId = this.props.match.params.farmerId
-        axios.get('/api/farmer/${farmerId}')
+        axios.get('/api/farmer/' + farmerId)
             .then((response) => {
                 const farmer = response.data
                 this.setState({ farmer })
@@ -32,9 +32,10 @@ class FarmerView extends Component {
                 <br />
                 <h4>{this.state.farmer.products}</h4>
                 <br />
-                <Link to={'/farmer/${this.state.farmer._id}/edit'}>edit page</Link>
+                <Link to={'/farmer/${this.props.match.params.farmerId/edit'}>edit page</Link>
             </div>
         );
     }
 }
 export default FarmerView
+

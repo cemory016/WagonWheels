@@ -24,13 +24,17 @@ text-align: left;
 font-size: 16em sans-serif;
 `
 
+const mktImg = styled.img`
+width: 4vw;
+`
+
 class HomeViewPage extends Component {
   render() {
     return (
       <div>
-        
-          <h1>Wagon Wheel Market</h1>
-    
+
+        <h1>Wagon Wheel Market</h1>
+
         <HomeButtons>
           <Button waves='light' node='a' href='/market'> Markets </Button>
           <Button waves='light' node='a' href='/signup'> Sign Up </Button>
@@ -42,6 +46,7 @@ class HomeViewPage extends Component {
           <p> Dolores elit but nemo aperiam but ex but ipsum. Magna modi aut, but autem ratione but ipsa culpa. Id veritatis magnam or eos perspiciatis incididunt. Tempor quia. Molestiae quaerat eum, consectetur or accusantium nostrud and aperiam. Laboriosam reprehenderit. Sequi dicta. Commodo voluptatem.</p>
           <p>Quam quia but reprehenderit or aperiam labore et. Sed ratione ipsa. Quam quaerat or sunt. Eos eaque totam sint. Nemo nemo magni or sint. Eu excepteur but iure and irure. Esse. Aut aliquip for minima so sint or aute. Nequeporro excepteur yet sint yet ullamco so cillum. Qui nemo veniam and dolore or officia but irure. Incidunt aperiam nostrum aliquip iure yet laboriosam. Veniam incidunt, sint but voluptatem voluptas. Elit consequat, and anim eos, yet ex officia. Do consequuntur and eos rem iste. Quasi doloremque, for nequeporro illo, deserunt deserunt so sunt. Consequat architecto consequat nequeporro for tempora. Corporis autem for amet qui, totam or voluptatem so error.</p>
         </div>
+        <img className='mktImg' src='../Img/neonbrand-392976-unsplash.jpg' />
       </div>
     )
   }

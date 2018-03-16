@@ -63,7 +63,7 @@ const BillyBob = new FarmerModel({
     farmerUserName: "Billy_Bob's_Beans",
     farmerEmail: "billybob@beans.com",
     farmerPassword: "billybob",
-    farmerImg: "https://sites.google.com/site/praisethebillybobgod22/home/Funny-Cool-Beans-Design.png",
+    farmerImg: "../Img/agence-producteurs-locaux-damien-kuhn-113763-unsplash.jpg",
     farmName: "Cool Beans",
     farmLocation: "Atlanta, Ga",
     aboutTheFarm: "At Billy Bob's Beans...we love beans....grren beans, pork beans, potato beans, beannie babies, pole beans, skinny beans,fat beans, all types of beans,",
@@ -74,7 +74,7 @@ const SallySue = new FarmerModel({
     farmerUserName: "Sallys_Salads",
     farmerEmail: "sallysue@salad.com",
     farmerPassword: "sallysue",
-    farmerImg: "https://sites.google.com/site/praisethebillybobgod22/home/Funny-Cool-Beans-Design.png",
+    farmerImg: "../Img/annie-spratt-215755-unsplash.jpg",
     farmName: "Cool Beans",
     farmLocation: "Atlanta, Ga",
     aboutTheFarm: "At Billy Bob's Beans...we love beans....grren beans, pork beans, potato beans, beannie babies, pole beans, skinny beans,fat beans, all types of beans,",
@@ -89,7 +89,7 @@ const DecaturMarket = new MarketModel({
 })
 const CollegeParkMarket = new MarketModel({
     marketName: "College Park",
-    marketImg: "Image of College Park Goes Here",
+    marketImg: "../Img/2I1A4480__2_.0.jpg",
     marketLocation: "College Park",
     aboutTheMarket: "College Park Bubba Sparks! We are open from 9am - 2pm ever Sunday",
     marketFarmers: [BillyBob, SallySue]

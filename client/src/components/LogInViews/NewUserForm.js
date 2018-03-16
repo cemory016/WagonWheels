@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import axios from 'axios'
+import { Button, Card, Row, Col } from 'react-materialize'
 
 class NewUserForm extends Component {
   state = {
-    username: ''
+    username: '',
+    userpassword: '',
+    userEmail: '',
   };
+
 
   handleChange = (event) => {
       const name = event.target.name
@@ -26,13 +30,21 @@ class NewUserForm extends Component {
   render() {
     return (
       <div>
-        <h1>hey</h1>
+        <h2>New User Sign Up</h2>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="username">Username: </label>
             <input onChange={this.handleChange} type="text" name="username" value={this.state.username} />
           </div>
-          <button>Submit</button>
+          <div>
+            <label htmlFor="userpassword">password: </label>
+            <input onChange={this.handleChange} type="text" name="userpassword" value={this.state.userpassword} />
+          </div>
+          <div>
+            <label htmlFor="userEmail">Username: </label>
+            <input onChange={this.handleChange} type="text" name="userEmail" value={this.state.userEmail} />
+          </div>
+          <Button waves='light' node='a'> Submit </Button>
         </form>
       </div>
     );

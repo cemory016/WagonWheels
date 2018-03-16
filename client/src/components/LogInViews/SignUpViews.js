@@ -10,26 +10,31 @@ class SignUpViews extends Component {
   state = {
     user: [],
     farmer: [],
-    showForm: false
+    showForm: true
   };
   
 
   componentWillMount() {
     this.getAllFarmer();
+    this.getAllUser()
   }
   getAllUser = async () => {
     const res = await axios.get("/api/user");
     this.setState({ user: res.data });
   };
+//   toggleNewForm = () => {
+//     this.setState({ showForm: !this.state.showForm })
+// }
+
 
  
   getAllFarmer = async () => {
     const res = await axios.get("/api/farmer");
     this.setState({ farmer: res.data });
   };
-  toggleNewForm = () => {
-      this.setState({ showForm: !this.state.showForm })
-  }
+  // toggleNewForm = () => {
+  //     this.setState({ showForm: !this.state.showForm })
+  // }
 
   render () {
     return (
@@ -43,7 +48,7 @@ class SignUpViews extends Component {
           </Link></h3>
           </div>
         ))}
-        <button onClick={this.toggleNewForm}>New User Sign Up</button>
+        {/* <button onClick={this.toggleNewForm}>New User Sign Up</button> */}
         {this.state.showForm ? (
             <NewUserForm getAllUser={this.getAllUser}/>
         ) : null}

@@ -29,7 +29,7 @@ class NewFarmerForm extends Component {
   render() {
     return (
       <div>
-        <h1>hey</h1>
+        <h2>New Farmer Sign Up</h2>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="farmerName">Farmer Name: </label>

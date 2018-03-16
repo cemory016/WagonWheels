@@ -7,23 +7,26 @@ class EditFarmer extends Component {
     state = {
         farmer: {
             farmerName: " ",
-            email: " ",
-            location: " ",
-            password: " ",
+            farmerEmail: " ",
+            farmerLocation: " ",
+            farmerPassword: " ",
         },
         redirect: false
     }
-    // componentDidMount = () => {
-    //     const farmerId = this.props.match.params.farmerId
-    // }
-
-    updateFarmer = () => {
-       const farmerId = this.props.match.params.farmerId
-        axios.patch(`/api/farmer/${farmerId}`, this.state.farmer)
-            .then((response) => {
-                this.setState({ farmer: response.data, redirect:true })
-            })
+    componentDidMount = () => {
+        const farmerId = this.props.match.params.farmerId
+        axios.patch(`/api/farmer/${farmerId}`).then(res => {
+          console.log(res.data)
+          this.setState({
+            farmer: res.data.farmerName,
+           farmerEmail: res.data.farmerEmail,
+           farmerLocation: res.data.farmerLocation,
+           farmerPassword: res.data.farmerPassword
+          })
+        })
     }
+
+    
     // updateFarmer = (event) => {
     //     event.preventDefault()
     //     const farmerId = this.state.farmer._id
@@ -48,9 +51,16 @@ class EditFarmer extends Component {
         event.preventDefault()
         const id = this.props.match.params.farmerId
     }
+    updateFarmer = () => {
+        const farmerId = this.props.match.params.farmerId
+         axios.patch(`/api/farmer/${farmerId}`, this.state.farmer)
+             .then((response) => {
+                 this.setState({ farmer: response.data, redirect:true })
+             })
+     }
     render() {
         if (this.state.redirect) {
-            return <Redirect to={'/farmer/${this.props.match.params.farmerId'} />
+            return <Redirect to={'/farmer/${farmer.id'} />
         } return (
             <div>
                 <form onSubmit={this.handleSubmit}>
