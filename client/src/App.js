@@ -12,28 +12,37 @@ import UserView from './components/UserViewPage/UserView'
 import FarmerView from './components/FarmerViewPage/FarmerView'
 import FarmerEdit from './components/FarmerViewPage/FarmerEdit'
 import ProductView from './components/ProductsViewPage/ProductView'
-import MarketsView from './components/MarketsView/MarketsView'
+import MarketView from './components/MarketView/MarketView'
 import NavBar from './components/NavBar'
 
 class App extends Component {
   //set state, axios and lifecycle(willmount) then render
   state = {
     user: [],
-    farmer: [],
     market: [],
+    farmer: [],
   }
   componentWillMount() {
     this.getUser()
     this.getFarmer()
-//   this.getMarkets()
+    this.getMarket()
   }
 
- 
+
   getUser = () => {
     axios.get('/api/user')
       .then(response => {
         const user = response.data
         this.setState({ user })
+      }).catch((err) => {
+        console.log(err)
+      })
+  }
+  getMarket = () => {
+    axios.get('/api/market')
+      .then(response => {
+        const market = response.data
+        this.setState({ market })
       }).catch((err) => {
         console.log(err)
       })
@@ -47,30 +56,23 @@ class App extends Component {
         console.log(err)
       })
   }
-  // getMarket = () => {
-  //   axios.get('/api/markets')
-  //     .then(response => {
-  //       const user = response.data
-  //       this.setState({ markets })
-  //     }).catch((err) => {
-  //       console.log(err)
-  //     })
-  // }
-  
+ 
+
   render() {
     const UsersPageComponent = () =>
-    (<UserView user={this.state.user}/>)
-    const FarmerPageComponent = () =>
-    (<FarmerView farmer={this.state.farmer}/>)
-    const MarketPageComponent = () =>
-    (<MarketsView market={this.state.market}/>)
+      (<UserView user={this.state.user} />)
+      const MarketPageComponent = () =>
+      (<MarketView market={this.state.market} />)
+      const FarmerPageComponent = () =>
+      (<FarmerView farmer={this.state.farmer} />)
+   
     return (
       <Router>
         <div>
           <NavBar />
           <Switch>
             <Route exact path="/" component={HomeViewPage} />
-            <Route exact path="/markets" component={MarketsView} />
+            <Route exact path="/market" component={MarketView} />
             <Route exact path="/signup" component={SignUpViews} />
             <Route exact path="/user/:userId" component={UserView} />
             <Route exact path="/user/:userId/edit" component={UserEdit} />
@@ -78,7 +80,7 @@ class App extends Component {
             <Route exact path="/farmer" component={FarmerView} />
             <Route exact path="/farmer/:farmerId" component={FarmerView} />
             <Route exact path="/farmer/:farmerId/edit" component={FarmerEdit} />
-            
+
           </Switch>
         </div>
       </Router>

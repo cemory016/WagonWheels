@@ -28,7 +28,7 @@ class HomeViewPage extends Component {
           <h1>Wagon Wheel Market</h1>
     
         <HomeButtons>
-          <Button waves='light' node='a' href='/markets'> Markets </Button>
+          <Button waves='light' node='a' href='/market'> Markets </Button>
           <Button waves='light' node='a' href='/signup'> Sign Up </Button>
           <Button waves='light' node='a' href='/login'> Login </Button>
         </HomeButtons>

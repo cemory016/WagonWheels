@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(`${__dirname}/client/build`))
 
 const marketController = require('./controllers/marketController')
-app.use('/api/markets', marketController)
+app.use('/api/market', marketController)
 
 const farmerController = require('./controllers/farmerController')
 app.use('/api/farmer', farmerController)

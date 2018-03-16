@@ -1,3 +1,3 @@
 # WagonWheels
 Project GitHub is https://github.com/cemory016/WagonWheels/blob/master/README.md
-uses Mater: https://react-materialize.github.io and https://github.com/RRutsche/react-parallax
+uses Mater: https://react-materialize.github.io

@@ -4,7 +4,9 @@ import { Button, Card, Row, Col } from 'react-materialize'
 
 class NewFarmerForm extends Component {
   state = {
-    farmerName: ''
+    farmerName: '',
+    farmName: '',
+    farmerEmail: '',
   };
 
   handleChange = (event) => {
@@ -30,8 +32,16 @@ class NewFarmerForm extends Component {
         <h1>hey</h1>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor="farmername">FarmerName: </label>
+            <label htmlFor="farmerName">Farmer Name: </label>
             <input onChange={this.handleChange} type="text" name="farmerName" value={this.state.farmerName} />
+          </div>
+          <div>
+            <label htmlFor="farmName">Farm Name: </label>
+            <input onChange={this.handleChange} type="text" name="farmName" value={this.state.farmName} />
+          </div>
+          <div>
+            <label htmlFor="farmerEmail">email: </label>
+            <input onChange={this.handleChange} type="text" name="farmerEmail" value={this.state.farmerEmail} />
           </div>
           <Button waves='light' node='a'> Submit </Button>
         </form>
